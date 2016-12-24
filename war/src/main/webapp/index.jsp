@@ -80,10 +80,7 @@
         <input type="text" id="city" name="city" value=""/>
     </div>
     <div class="spacer">
-        <p><fmt:message key="apps"/></p>
-        <ul>
-            <li><a href="http://127.0.0.1:7070/wildfly10core/fsprint">http://127.0.0.1:7070/wildfly10core/fsprint</a></li>
-        </ul>
+        <p><a href="apps.jsp"><fmt:message key="apps"/></a></p>
     </div>
 </div>
 </body>
