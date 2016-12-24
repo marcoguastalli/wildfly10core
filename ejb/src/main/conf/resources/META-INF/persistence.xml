@@ -1,0 +1,5 @@
+<persistence>
+    <persistence-unit name="MySqlDS">
+        <jta-data-source>java:jboss/datasources/MySqlDS</jta-data-source>
+    </persistence-unit>
+</persistence>

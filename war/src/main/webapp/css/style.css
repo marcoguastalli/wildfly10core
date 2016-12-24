@@ -1,0 +1,129 @@
+/*reset-ini*/
+html, div, span,
+applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dd, dl, dt, li, ol, ul,
+fieldset, form, label, legend, caption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 100%;
+    line-height: 1;
+    font-family: Arial;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 1px;
+}
+
+th {
+    text-align: left;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+q:before, q:after,
+blockquote:before, blockquote:after {
+    content: "";
+}
+
+body {
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 100%;
+    line-height: 1.25;
+    font-family: inherit;
+    text-align: left;
+}
+
+fieldset, img {
+    border: 0;
+}
+
+/*reset-end*/
+/*structure-ini*/
+#wrapper {
+    margin: 0 auto;
+    width: 95%;
+}
+
+/*structure-end*/
+/*spacer-ini*/
+.spacer_tiny {
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.spacer_mini {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.spacer {
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.inline-spacer_tiny {
+    display: inline;
+    margin-left: 5px;
+    margin-top: 1px;
+}
+
+.inline-spacer_mini {
+    display: inline;
+    margin-left: 20px;
+    margin-top: 1px;
+}
+
+.inline-spacer {
+    display: inline;
+    margin-left: 30px;
+    margin-top: 1px;
+}
+
+.inline-div {
+    display: inline;
+}
+
+/*spacer-end*/
+/*font-ini*/
+.font_tiny {
+    font-size: 80%;
+}
+
+.font_bold {
+    font-weight: bold;
+}
+
+.font_error {
+    color: #FF0000;
+}
+
+.font_error_bold {
+    color: #FF0000;
+    font-weight: bold;
+}
+
+.font_success {
+    color: #098309;
+}
+
+.font_success_bold {
+    color: #098309;
+    font-weight: bold;
+}
+
+/*font-end*/
