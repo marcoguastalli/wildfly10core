@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app
+        xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+        version="3.0">
+    <display-name>wildfly10core</display-name>
+
+    <servlet>
+        <servlet-name>cdsServlet</servlet-name>
+        <servlet-class>servlet.cds.CdsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cdsServlet</servlet-name>
+        <url-pattern>/cdsServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>HelloWebService</servlet-name>
+        <servlet-class>ws.HelloWebService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HelloWebService</servlet-name>
+        <url-pattern>/HelloWebService</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CdsWebService</servlet-name>
+        <servlet-class>ws.CdsWebService</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CdsWebService</servlet-name>
+        <url-pattern>/CdsWebService</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>createBook</servlet-name>
+        <servlet-class>servlet.book.CreateBook</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>createBook</servlet-name>
+        <url-pattern>/createBook</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>displayBook</servlet-name>
+        <servlet-class>servlet.book.DisplayBook</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>displayBook</servlet-name>
+        <url-pattern>/displayBook</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>displayAllBooks</servlet-name>
+        <servlet-class>servlet.book.DisplayAllBooks</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>displayAllBooks</servlet-name>
+        <url-pattern>/displayAllBooks</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AutoComplete</servlet-name>
+        <servlet-class>servlet.autocomplete.AutoComplete</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AutoComplete</servlet-name>
+        <url-pattern>/AutoComplete</url-pattern>
+    </servlet-mapping>
+
+    <!-- Auto scan REST service -->
+    <!--
+        <context-param>
+            <param-name>resteasy.scan</param-name>
+            <param-value>true</param-value>
+        </context-param>
+    -->
+
+    <listener>
+        <listener-class>
+            org.jboss.resteasy.plugins.server.servlet.ResteasyBootstrap
+        </listener-class>
+    </listener>
+
+    <servlet>
+        <servlet-name>resteasy-servlet</servlet-name>
+        <servlet-class>
+            org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher
+        </servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>resteasy-servlet</servlet-name>
+        <url-pattern>/CdsFinder/*</url-pattern>
+    </servlet-mapping>
+
+    <context-param>
+        <param-name>resteasy.resources</param-name>
+        <param-value>servlet.cds.CdsFinder</param-value>
+    </context-param>
+
+    <!-- i18n -->
+    <context-param>
+        <param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
+        <param-value>i18n.text</param-value>
+    </context-param>
+    <context-param>
+        <param-name>javax.servlet.jsp.jstl.fmt.fallbackLocale</param-name>
+        <param-value>en</param-value>
+    </context-param>
+    <context-param>
+        <param-name>javax.servlet.jsp.jstl.fmt.locale</param-name>
+        <param-value>en</param-value>
+    </context-param>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- jstl -->
+    <jsp-config>
+        <taglib>
+            <taglib-uri>http://java.sun.com/jsp/jstl/core</taglib-uri>
+            <taglib-location>/WEB-INF/tld/c.tld</taglib-location>
+        </taglib>
+        <taglib>
+            <taglib-uri>http://java.sun.com/jsp/jstl/fmt</taglib-uri>
+            <taglib-location>/WEB-INF/tld/fmt.tld</taglib-location>
+        </taglib>
+        <taglib>
+            <taglib-uri>http://java.sun.com/jsp/jstl/functions</taglib-uri>
+            <taglib-location>/WEB-INF/tld/fn.tld</taglib-location>
+        </taglib>
+        <taglib>
+            <taglib-uri>http://java.sun.com/jsp/jstl/sql</taglib-uri>
+            <taglib-location>/WEB-INF/tld/sql.tld</taglib-location>
+        </taglib>
+        <taglib>
+            <taglib-uri>http://java.sun.com/jsp/jstl/xml</taglib-uri>
+            <taglib-location>/WEB-INF/tld/x.tld</taglib-location>
+        </taglib>
+    </jsp-config>
+</web-app>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="model" default-access="field" default-lazy="false" schema="cdcol">
+
+    <class name="Cd" table="cds">
+        <id name="id" column="id"/>
+        <property name="title" column="titel"/>
+        <property name="artist" column="interpret"/>
+        <property name="year" column="jahr"/>
+    </class>
+
+</hibernate-mapping>
