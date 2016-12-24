@@ -1,10 +1,13 @@
 package model;
 
-import java.io.Serializable;
-
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import java.io.Serializable;
+
+@XmlRootElement(name = "cd")
 public class Cd implements Serializable {
 
     private int id;
@@ -19,8 +22,9 @@ public class Cd implements Serializable {
         this.year = 0;
     }
 
+    @XmlElement(name = "ddbbid")
     public int getId() {
-        return this.id;
+        return id;
     }
 
     public void setId(int id) {
@@ -28,7 +32,7 @@ public class Cd implements Serializable {
     }
 
     public String getTitle() {
-        return this.title;
+        return title;
     }
 
     public void setTitle(String title) {
@@ -36,7 +40,7 @@ public class Cd implements Serializable {
     }
 
     public String getArtist() {
-        return this.artist;
+        return artist;
     }
 
     public void setArtist(String artist) {
@@ -44,7 +48,7 @@ public class Cd implements Serializable {
     }
 
     public int getYear() {
-        return this.year;
+        return year;
     }
 
     public void setYear(int year) {
@@ -64,19 +68,19 @@ public class Cd implements Serializable {
         Cd rhs = (Cd) obj;
         return new EqualsBuilder()
                 .appendSuper(super.equals(obj))
-                .append(this.id, rhs.id)
-                .append(this.title, rhs.title)
-                .append(this.artist, rhs.artist)
-                .append(this.year, rhs.year)
+                .append(id, rhs.id)
+                .append(title, rhs.title)
+                .append(artist, rhs.artist)
+                .append(year, rhs.year)
                 .isEquals();
     }
 
     public int hashCode() {
         return new HashCodeBuilder(17, 37).
-                append(this.id).
-                append(this.title).
-                append(this.artist).
-                append(this.year).
+                append(id).
+                append(title).
+                append(artist).
+                append(year).
                 toHashCode();
     }
 }
