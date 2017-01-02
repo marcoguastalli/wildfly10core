@@ -62,7 +62,7 @@ var createBookFunction = function () {
     domElement.click(function () {
         $.ajax({
             type: "POST",
-            url: "http://localhost:7070/wildfly10core/createBook",
+            url: "http://localhost:8180/wildfly10core/createBook",
             data: { author: "Marco Guastalli", title: "Marco IO" }
         })
             .done(function (book) {
@@ -75,7 +75,7 @@ var displayBookFunction = function () {
     domElement.click(function () {
         $.ajax({
             type: "POST",
-            url: "http://localhost:7070/wildfly10core/displayBook",
+            url: "http://localhost:8180/wildfly10core/displayBook",
             data: { author: "Marco Guastalli", title: "Marco IO" }
         })
     });
@@ -90,7 +90,7 @@ var displayAllBooksFunction = function () {
     domElement.click(function () {
         $.ajax({
             type: "POST",
-            url: "http://localhost:7070/wildfly10core/displayAllBooks"
+            url: "http://localhost:8180/wildfly10core/displayAllBooks"
         })
     });
 };
@@ -120,7 +120,7 @@ var autocompleteDisplayCitiesFunction = function () {
     domElement.click(function () {
         $.ajax({
             type: "GET",
-            url: "http://localhost:7070/wildfly10core/AutoComplete",
+            url: "http://localhost:8180/wildfly10core/AutoComplete",
             data: {
                 searchKey: "Barce",
                 productType: "FLIGHT",
@@ -161,7 +161,7 @@ var autocompleteIsJQueryUiAutoCompleteWidgetJsonpSourceFunction = function () {
     domElement.click(function () {
         $.ajax({
             type: "GET",
-            url: "http://localhost:7070/wildfly10core/AutoComplete",
+            url: "http://localhost:8180/wildfly10core/AutoComplete",
             data: {
                 searchKey: "Madrid",
                 productType: "FLIGHT",
@@ -193,7 +193,7 @@ $(function() {
         source:function(request, response) {
             $.ajax({
                 type: "GET",
-                url: "http://localhost:7070/wildfly10core/AutoComplete",
+                url: "http://localhost:8180/wildfly10core/AutoComplete",
                 contentType: "application/json",
                 dataType: "json",
                 data:{
