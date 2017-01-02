@@ -23,7 +23,7 @@
     <h1><fmt:message key="apps"/></h1>
     <div class="spacer">
         <ul>
-            <li><a href="http://127.0.0.1:7070/wildfly10core/fsprint">http://127.0.0.1:7070/wildfly10core/fsprint</a></li>
+            <li><a href="http://127.0.0.1:8180/wildfly10core/fsprint">/wildfly10core/fsprint</a></li>
         </ul>
     </div>
 </div>

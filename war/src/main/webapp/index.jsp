@@ -28,9 +28,9 @@
     <div class="spacer">
         <ul>
             <li><a href="cdsServlet">cdsServlet</a></li>
-            <li><a href="http://localhost:7070/wildfly10core/CdsFinder">CdsFinder</a></li>
-            <li><a href="http://localhost:7070/wildfly10core/CdsFinder/findCdById;id=1;">findCdById</a></li>
-            <li><a href="http://127.0.0.1:7070/wildfly10core/HelloWebService?wsdl">http://127.0.0.1:7070/wildfly10core/HelloWebService?wsdl</a></li>
+            <li><a href="http://localhost:8180/wildfly10core/CdsFinder">CdsFinder</a></li>
+            <li><a href="http://localhost:8180/wildfly10core/CdsFinder/findCdById;id=1;">findCdById</a></li>
+            <li><a href="http://127.0.0.1:8180/wildfly10core/HelloWebService?wsdl">/wildfly10core/HelloWebService?wsdl</a></li>
         </ul>
         <div id="cds">
             <form method="post" id="formCd" name="formCd" action="cdsServlet">
